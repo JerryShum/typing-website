@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    overflow-x: hidden;
+
+    background-color: #708090;
+}
+
+.container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 4.8rem;
+}
+
+
+/*? Header */
+.logo {
+    scale: 0.75;
+    margin-bottom: 2rem;
+}
+
+/*? Interact  */
+
+.interact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.timer {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.new-game-button {
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.new-game-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/*? Writing area */
+
+.writing-area {
+    position: relative;
+}
+
+.focus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.writing-display {
+    line-height: 2;
+    filter: blur(0.5rem);
+    transition: all 0.2s;
+}
+
+.writing-area:focus {
+    border: none;
+    outline: none;
+}
+
+.writing-area:focus .writing-display {
+    filter: blur(0);
+}
+
+.writing-area:focus .focus {
+    display: none;
+}
+
+
+/*? Cursor */
+.cursor {
+    background-color: #000000;
+    width: 0.2rem;
+    height: 2rem;
+
+    position: fixed;
+    top: 17.6rem;
+    left: 32.3rem;
+
+    animation: blink 1.5s infinite;
+
+    /* display: none; */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*? Incorrect/correct */
+
+.incorrect {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.correct {
+    color: #00ff00;
+}
