@@ -66,6 +66,12 @@ body {
     position: relative;
 }
 
+.word {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 5px;
+}
+
 .focus {
     position: absolute;
     top: 50%;
@@ -110,7 +116,11 @@ body {
 
     animation: blink 1.5s infinite;
 
-    /* display: none; */
+    display: none;
+}
+
+.writing-area:focus .cursor {
+    display: block;
 }
 
 @keyframes blink {
@@ -126,6 +136,9 @@ body {
         opacity: 0;
     }
 }
+
+/*? Active */
+.active {}
 
 /*? Incorrect/correct */
 
